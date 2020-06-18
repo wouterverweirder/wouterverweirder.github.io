@@ -39,9 +39,11 @@ const BlogPostTemplate = (props: any) => {
   const siteUrl = props.data.site.siteMetadata.siteUrl;
   const shareUrl = urljoin(siteUrl, slug);
 
+  const disqusUrl = urljoin('http://blog.aboutme.be', slug);
+
   const disqusConfig = {
     shortname: process.env.DISQUS_NAME,
-    config: { identifier: shareUrl, title },
+    config: { identifier: disqusUrl, title },
   };
   return (
     <Layout>
