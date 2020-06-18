@@ -41,7 +41,7 @@ const BlogPostTemplate = (props: any) => {
 
   const disqusConfig = {
     shortname: process.env.DISQUS_NAME,
-    config: { identifier: slug, title },
+    config: { identifier: shareUrl, title },
   };
   return (
     <Layout>
