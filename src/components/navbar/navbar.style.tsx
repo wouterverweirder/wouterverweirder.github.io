@@ -28,6 +28,7 @@ export const NavbarWrapper = styled.div`
 export const Logo = styled.div`
   margin-right: 50px;
   flex-shrink: 0;
+  max-width: 200px;
   @media (max-width: 990px) {
     margin: 0 25px;
   }
