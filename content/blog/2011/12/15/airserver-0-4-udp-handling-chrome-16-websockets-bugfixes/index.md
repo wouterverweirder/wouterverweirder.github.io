@@ -2,8 +2,8 @@
 title: 'AIRServer 0.4 – UDP Handling, Chrome 16 websockets & bugfixes'
 author: 'wouter'
 date: 2011-12-15T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
@@ -19,8 +19,6 @@ tags:
   - websockets
 ---
 I’ve just finished some updates on my AIRServer library, which enables you to create an AIR app that listens for different inputs such as sockets, websockets and P2P traffic. This gives you the option to create a multi-user game, with different input controllers.
-
-![AIRServer handles multiple inputs](/wp-content/uploads/2011/12/Screen-Shot-2011-12-15-at-09.43.png "AIRServer handles multiple inputs")
 
 I’ve added a UDP Endpoint, so you can handle UDP traffic aswell now ([check out the UDP native extension for AIR mobile, to use UDP on mobile devices][1]). UDP is connectionless, so you can specify a timeout, when we mark a “udp client” as disconnected.
 

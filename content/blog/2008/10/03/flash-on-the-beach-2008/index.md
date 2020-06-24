@@ -2,8 +2,8 @@
 title: Flash On The Beach 2008
 author: 'wouter'
 date: 2008-10-03T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

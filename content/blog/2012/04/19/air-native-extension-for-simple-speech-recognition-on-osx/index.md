@@ -2,8 +2,8 @@
 title: AIR Native extension for simple speech recognition on OSX
 author: 'wouter'
 date: 2012-04-19T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
@@ -57,5 +57,7 @@ protected function commandRecognizedHandler(event:CommandRecognizedEvent):void
 Note that this built-in speech recognition engine is quite sensitive to background noise, and only recognizes US-English spoken words.
 
 [Everything (as3 source, native source, demo & ane) is on github for your coding pleasure][1]. Enjoy!
+
+Microphone Icon made by Eucalyp from www.flaticon.com
 
 [1]: https://github.com/wouterverweirder/AIR-OSX-NSSpeechRecognizerBridge-Extension		"Code on Github"

@@ -2,8 +2,8 @@
 title: extending MovieClip
 author: 'wouter'
 date: 2006-09-20T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

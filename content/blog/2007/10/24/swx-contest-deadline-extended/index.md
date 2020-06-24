@@ -2,8 +2,8 @@
 title: SWX contest deadline extended
 author: 'wouter'
 date: 2007-10-24T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

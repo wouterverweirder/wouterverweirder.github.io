@@ -2,8 +2,8 @@
 title: 'Deeplinking & browser back button in Flash'
 author: 'wouter'
 date: 2006-11-02T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

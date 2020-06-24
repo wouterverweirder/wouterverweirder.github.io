@@ -2,8 +2,8 @@
 title: benchmarking cakeswx/amfphp
 author: 'wouter'
 date: 2008-01-20T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

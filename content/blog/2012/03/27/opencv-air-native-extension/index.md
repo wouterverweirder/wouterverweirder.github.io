@@ -2,8 +2,8 @@
 title: OpenCV AIR Native Extension
 author: 'wouter'
 date: 2012-03-27T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

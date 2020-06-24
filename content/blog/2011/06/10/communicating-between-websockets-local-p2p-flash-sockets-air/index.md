@@ -2,8 +2,8 @@
 title: 'Communicating between websockets, local P2P, flash sockets & AIR'
 author: 'wouter'
 date: 2011-06-10T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
@@ -14,8 +14,6 @@ tags:
   - html5
 ---
 I’ve shown you [how to handle websockets in adobe air][1], and how to [set up communication between flash sockets, websockets and adobe air][2] using a library I wrote. I’ve extended the library with support for local P2P, using [Cocoon P2P][3].
-
-![AIRServer, Sockets, Websockets and RTMFP](/wp-content/uploads/2011/06/airserver-sockets-websockets-rtmfp.png "AIRServer, Sockets, Websockets and RTMFP")
 
 <!--more-->
 

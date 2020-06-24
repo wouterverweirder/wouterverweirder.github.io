@@ -2,8 +2,8 @@
 title: 'AIR Native extensions Hello World Example & ANT Script'
 author: 'wouter'
 date: 2011-09-12T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

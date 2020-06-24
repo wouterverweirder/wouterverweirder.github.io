@@ -2,17 +2,12 @@
 title: Using FCKEditor in Flex and AIR
 author: 'wouter'
 date: 2009-08-17T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
 permalink: /2009/08/17/using-fckeditor-in-flex-and-air/
-categories:
-  - Actionscript 3.0
-  - AIR
-  - fckeditor
-  - Flex
 tags:
   - Actionscript 3.0
   - AIR
@@ -22,8 +17,6 @@ tags:
 **UPDATE: you should take a look at [my CKEditor implementation][1], as CKEditor is the successor to FCKEditor**.
 
 One of the most wanted features in Adobe Flex / AIR is a better Rich Text Editor. There are some great ones available for javascript, so why can’t we have an editor with the same featureset? Well, it is actually possible to incorporate existing javascript editors in your Flex / AIR applications.
-
-![Flex FCKEditor](/wp-content/uploads/2009/08/flex_fck_editor_screenshot.jpg "Flex FCKEditor")
 
 <del datetime="2013-02-10T10:50:52+00:00">You can download my library + demo’s at [/wp-content/uploads/flex_fckeditor/flex_fck_editor_0.1.zip][2]</del>
 

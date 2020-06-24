@@ -2,8 +2,8 @@
 title: SWX contest
 author: 'wouter'
 date: 2007-10-06T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

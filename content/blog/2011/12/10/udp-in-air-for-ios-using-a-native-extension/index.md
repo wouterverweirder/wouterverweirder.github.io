@@ -2,8 +2,8 @@
 title: UDP in AIR for iOS using a native extension
 author: 'wouter'
 date: 2011-12-10T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
@@ -20,8 +20,6 @@ tags:
 When you’re using a mobile device as a controller for an application or a game, you’ll want fast data transfers. Classic TCP/IP traffic over sockets is a bit slow, due to the nature of TCP/IP (packets are delivered in the correct order, the receiver sends a confirmation of reception to the sender for each received packet). The alternative is UDP: you’re not sure if the packet arrives, or in what order you packets will arrive at the destination, but because of that, there is less delay between the sender and the receiver of the packet.
 
 AIR has a builtin class to handle UDP: flash.net.DatagramSocket. However, for some reason this is not available on AIR for mobile devices. I decided to write a native extension (<del datetime="2011-12-14T19:59:22+00:00">only for iOS for now</del>) to offer UDP functionality on AIR for mobile devices. I tried to use the same API as the DatagramSocket for AIR for Desktop, so the principles are the same.
-
-![Example of UDPSocket extension on AIR for iOS](/wp-content/uploads/2011/12/screenshot_0.1.png "Example of UDPSocket extension on AIR for iOS")
 
 To send packets over UDP, you’ll create an instance of the UDPSocket class (be.aboutme.nativeExtensions.udp.UDPSocket), and use the send method with a bytearray:
 

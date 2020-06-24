@@ -2,8 +2,8 @@
 title: 'AIRServer 0.5 – socket byte concatenation'
 author: 'wouter'
 date: 2011-12-23T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

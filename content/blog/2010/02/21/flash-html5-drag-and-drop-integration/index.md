@@ -2,8 +2,8 @@
 title: 'Flash – HTML5 Drag and drop integration'
 author: 'wouter'
 date: 2010-02-21T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

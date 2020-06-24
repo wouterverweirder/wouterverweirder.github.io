@@ -2,8 +2,8 @@
 title: Flex Builder 2.01
 author: 'wouter'
 date: 2007-01-05T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

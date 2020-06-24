@@ -2,8 +2,8 @@
 title: 'FITC Amsterdam – slides & demo videos of opencv & finger tracking air native extensions'
 author: 'wouter'
 date: 2012-02-29T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

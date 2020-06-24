@@ -2,8 +2,8 @@
 title: Flex Mobile Tabbed View Navigator Button Badge
 author: 'wouter'
 date: 2011-10-28T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
@@ -17,8 +17,6 @@ tags:
   - skinning
 ---
 I wanted to display a “badge text” in a Flex Mobile project. Badge texts are the red circles on iOS, where you can see a number of updates, unread messages, …
-
-![Badge texts on tabbed view navigator](/wp-content/uploads/2011/10/Screen-Shot-2011-10-28-at-15.52.17.png "Badge texts on tabbed view navigator")
 
 This isn’t included in the default flex mobile components / skins, so I decided to extend & skin the tabbed view navigator, so you’re able to add this functionality in your applications.
 

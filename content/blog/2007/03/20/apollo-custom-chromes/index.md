@@ -2,8 +2,8 @@
 title: Apollo Custom Chromes
 author: 'wouter'
 date: 2007-03-20T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
@@ -23,10 +23,10 @@ Tout court, this is how I did it:
 ``` css
 ApolloApplication  
 {  
-	background-color:”";  
-	background-image:”";  
+	background-color:"";  
+	background-image:"";  
 	padding: 0px;  
-	show-flex-chrome:”";  
+	show-flex-chrome:"";  
 }
 ```
 

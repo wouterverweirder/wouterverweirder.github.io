@@ -2,8 +2,8 @@
 title: Kinect native extension for Adobe AIR
 author: 'wouter'
 date: 2011-10-02T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

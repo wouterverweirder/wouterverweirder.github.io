@@ -2,8 +2,8 @@
 title: 'AIRServer – handling both sockets & websockets in Adobe AIR'
 author: 'wouter'
 date: 2011-06-09T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
@@ -13,11 +13,7 @@ tags:
   - AIR
   - html5
 ---
-[In my previous post, I talked about how to handle websockets in Adobe AIR][1]. I’ve written a library around it, which makes it easier to implement in your projects. Another benefit of the library, is you can combine websockets with regular sockets, so you’re able to talk between Adobe AIR, websockets and flash sockets.
-
-![AIRServer Messages Demo](/wp-content/uploads/2011/06/airserver-messages-demo.png "AIRServer Messages Demo")
-
-<!--more-->
+[In my previous post, I talked about how to handle websockets in Adobe AIR][1]. I’ve written a library around it, which makes it easier to implement in your projects. Another benefit of the library, is you can combine websockets with regular sockets, so you’re able to talk between Adobe AIR, websockets and flash sockets.<!--more-->
 
 First of all, [download the sources containing the library and some demo projects][2]. Import the library project into Flash Builder. Next step could be checking out the demo’s: you’ll need the server demo (MessagesDemoServer), which is an Adobe AIR app.
 

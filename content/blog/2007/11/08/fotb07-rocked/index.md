@@ -2,8 +2,8 @@
 title: FOTB07 rocked
 author: 'wouter'
 date: 2007-11-08T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

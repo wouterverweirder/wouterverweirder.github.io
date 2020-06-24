@@ -2,8 +2,8 @@
 title: Access the mac sudden motion sensor with an AIR native extension
 author: 'wouter'
 date: 2012-01-13T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

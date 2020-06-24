@@ -2,8 +2,8 @@
 title: websocket version 8 support in AIR Server
 author: 'wouter'
 date: 2011-11-24T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
@@ -20,9 +20,9 @@ Some of my students noticed the websockets didn’t work in the latest versions 
 
 Anyway, took me quite some work, but I finally got it working. I was able to port some of the code of the Bauglir Internet Library ([http://www.webnt.eu/index.php][2]) to actionscript. AIRServer now supports both hybi-00 and hybi-10 of the protocol.
 
-<del datetime="2011-12-15T09:39:34+00:00">[You can download the updated library and demo’s here][1]. Enjoy!</del>
+<del datetime="2011-12-15T09:39:34+00:00">[You can download the updated library and demo’s here][3]. Enjoy!</del>
 
-[You can find the latest version on github][2]
+[You can find the latest version on github][4]
 
 [1]: http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10 	"Spec"
 [2]: http://www.webnt.eu/index.php 											"Bauglir Internet Library"

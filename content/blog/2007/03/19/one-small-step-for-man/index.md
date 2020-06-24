@@ -2,8 +2,8 @@
 title: 'One small step for man…'
 author: 'wouter'
 date: 2007-03-19T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

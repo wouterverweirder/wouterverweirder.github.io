@@ -2,8 +2,8 @@
 title: 'as3osceleton: Using Kinect as a multitouch device in adobe AIR'
 author: 'wouter'
 date: 2011-03-07T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

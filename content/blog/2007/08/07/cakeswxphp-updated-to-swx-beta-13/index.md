@@ -2,8 +2,8 @@
 title: CakeSWXPHP updated to SWX beta 1.3
 author: 'wouter'
 date: 2007-08-07T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true

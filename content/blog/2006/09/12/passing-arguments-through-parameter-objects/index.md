@@ -2,8 +2,8 @@
 title: Passing arguments through parameter objects
 author: 'wouter'
 date: 2006-09-12T00:10:00.000Z
-cover: ./preview.png
-hasCover: false
+cover: ./preview.jpg
+hasCover: true
 description: false
 layout: post
 comments: true
