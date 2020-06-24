@@ -1,4 +1,239 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AboutMe.be]]></title><description><![CDATA[My personal blog]]></description><link>https://blog.aboutme.be</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Jun 2020 13:52:52 GMT</lastBuildDate><item><title><![CDATA[AIR Native extension for simple speech recognition on OSX]]></title><description><![CDATA[Today I played around a bit with speech recognition on OSX. One of the things I did, was create a simple bridge between Adobe AIR and the…]]></description><link>https://blog.aboutme.be/2012/04/19/air-native-extension-for-simple-speech-recognition-on-osx/</link><guid isPermaLink="false">https://blog.aboutme.be/2012/04/19/air-native-extension-for-simple-speech-recognition-on-osx/</guid><pubDate>Thu, 19 Apr 2012 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I played around a bit with speech recognition on OSX. One of the things I did, was create a simple bridge between Adobe AIR and the NSSpeechRecognizer API on OSX. This api allows you to set a predefined list of commands, and listen for those spoken commands.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AboutMe.be]]></title><description><![CDATA[My personal blog]]></description><link>https://blog.aboutme.be</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Jun 2020 20:59:53 GMT</lastBuildDate><item><title><![CDATA[Phaser and Arduino game for Ketnet]]></title><description><![CDATA[I had the pleasure to work on another fun project for Ketnet. They’re launching a tv show around gaming, with famous comedian William Boeva…]]></description><link>https://blog.aboutme.be/2016/10/01/phaser-and-arduino-game-for-ketnet/</link><guid isPermaLink="false">https://blog.aboutme.be/2016/10/01/phaser-and-arduino-game-for-ketnet/</guid><pubDate>Sat, 01 Oct 2016 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;I had the pleasure to work on another fun project for &lt;a href=&quot;https://ketnet.be&quot;&gt;Ketnet&lt;/a&gt;. They’re launching a tv show around gaming, with famous comedian &lt;a href=&quot;https://www.williamboeva.be/&quot;&gt;William Boeva&lt;/a&gt; as it’s host. During the show, they wanted kids to play a simple game against Boeva. The kids would play using a giant controller, and have to collaborate, while Boeva is playing against them using a regular game controller.&lt;/p&gt;
+&lt;p&gt;The giant controller was built by the decor people at &lt;a href=&quot;https://ketnet.be&quot;&gt;Ketnet&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5b2eb3d34ae9446d5f0628c5ce2e8a62/c8ae0/prototype.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAByZM0wC4f/8QAGhABAQACAwAAAAAAAAAAAAAAAQIAAwQRIf/aAAgBAQABBQJ9xa6mBOGk7tl1sc//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAACAgMBAAAAAAAAAAAAAAAAAREhEDFBof/aAAgBAQAGPwKpLXhwvUDbx//EABsQAQEBAQADAQAAAAAAAAAAAAERACExQVGx/9oACAEBAAE/IeSUpcwqcJXKajKPcr+5SGL4uOfN/9oADAMBAAIAAwAAABAP/wD/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxCn/8QAFhEBAQEAAAAAAAAAAAAAAAAAABFB/9oACAECAQE/ENR//8QAHBABAAIDAAMAAAAAAAAAAAAAAQARITFBcZHR/9oACAEBAAE/ECCzIYuvNTYRFNUagEgeOOSrin0vh8Rw5SWUF4Ika9J//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;prototype giant controller&quot;
+        title=&quot;prototype giant controller&quot;
+        src=&quot;/static/5b2eb3d34ae9446d5f0628c5ce2e8a62/1c72d/prototype.jpg&quot;
+        srcset=&quot;/static/5b2eb3d34ae9446d5f0628c5ce2e8a62/a80bd/prototype.jpg 148w,
+/static/5b2eb3d34ae9446d5f0628c5ce2e8a62/1c91a/prototype.jpg 295w,
+/static/5b2eb3d34ae9446d5f0628c5ce2e8a62/1c72d/prototype.jpg 590w,
+/static/5b2eb3d34ae9446d5f0628c5ce2e8a62/a8a14/prototype.jpg 885w,
+/static/5b2eb3d34ae9446d5f0628c5ce2e8a62/fbd2c/prototype.jpg 1180w,
+/static/5b2eb3d34ae9446d5f0628c5ce2e8a62/c8ae0/prototype.jpg 1279w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To keep things as simple as possible, I went for an Arduino micro, which is a compact Arduino board, capable of emulating a keyboard. This way I don’t have to deal with setting up complicated communication flows using sockets or native code: I can simply listen for keyboard events in the frontend code!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1b816dc2900c964de6b4d8e147743aa0/c8ae0/electronics.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABsKtKZUDIr//EABsQAQEAAQUAAAAAAAAAAAAAAAIBEgMEERQi/9oACAEBAAEFAm6VdxYzeS9PJdb0Zif/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAgEBPwGn/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAEREiH/2gAIAQEABj8ChOCZaXQkf//EABsQAAMBAAMBAAAAAAAAAAAAAAABESExQWGR/9oACAEBAAE/IUFEo1dMIk94ROziH1HzTaeD/9oADAMBAAIAAwAAABDcP//EABURAQEAAAAAAAAAAAAAAAAAABBR/9oACAEDAQE/EIf/xAAXEQADAQAAAAAAAAAAAAAAAAAAATFR/9oACAECAQE/EKeCP//EABoQAQEAAwEBAAAAAAAAAAAAAAERACExQWH/2gAIAQEAAT8QqImq6YZabCCrfM4b21mzlwAW3H1w23tft5ibVMuf/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;arduino micro board&quot;
+        title=&quot;arduino micro board&quot;
+        src=&quot;/static/1b816dc2900c964de6b4d8e147743aa0/1c72d/electronics.jpg&quot;
+        srcset=&quot;/static/1b816dc2900c964de6b4d8e147743aa0/a80bd/electronics.jpg 148w,
+/static/1b816dc2900c964de6b4d8e147743aa0/1c91a/electronics.jpg 295w,
+/static/1b816dc2900c964de6b4d8e147743aa0/1c72d/electronics.jpg 590w,
+/static/1b816dc2900c964de6b4d8e147743aa0/a8a14/electronics.jpg 885w,
+/static/1b816dc2900c964de6b4d8e147743aa0/fbd2c/electronics.jpg 1180w,
+/static/1b816dc2900c964de6b4d8e147743aa0/c8ae0/electronics.jpg 1279w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I build the game itself using &lt;a href=&quot;https://phaser.io&quot;&gt;PhaserJS&lt;/a&gt;, which has &lt;a href=&quot;/2015/09/04/kinect-game-for-live-television/&quot;&gt;proven itself worthy of running on live television in a previous project&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The graphics were made in-house at Ketnet by Sam Pauwels.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dfa016adf9c891e00dafc393c4d43626/eea4a/game.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEDBP/EABcBAAMBAAAAAAAAAAAAAAAAAAABAwT/2gAMAwEAAhADEAAAAYLI2aiJol//xAAaEAEAAwADAAAAAAAAAAAAAAABAAIREiFB/9oACAEBAAEFAu98wtFeVmC5/8QAGBEAAgMAAAAAAAAAAAAAAAAAABEBAiH/2gAIAQMBAT8BiyxCP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhH/2gAIAQIBAT8B0PYL/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAERMQIQgZH/2gAIAQEABj8ChJ8Ky8JgsWv/xAAZEAEAAwEBAAAAAAAAAAAAAAABABExIVH/2gAIAQEAAT8hPDPE6Kga5QmlSCsLIg0XIY0z/9oADAMBAAIAAwAAABD4L//EABcRAQEBAQAAAAAAAAAAAAAAAAEAIZH/2gAIAQMBAT8QQAHJ3f/EABcRAQEBAQAAAAAAAAAAAAAAABEAASH/2gAIAQIBAT8QfN5Bhf/EABwQAQEAAgIDAAAAAAAAAAAAAAERACExYVGRof/aAAgBAQABPxBAGPBNXQt94JuihEp5xiI+IE46x4AoqPWShWneXlKX7n//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;screenshot game&quot;
+        title=&quot;screenshot game&quot;
+        src=&quot;/static/dfa016adf9c891e00dafc393c4d43626/1c72d/game.jpg&quot;
+        srcset=&quot;/static/dfa016adf9c891e00dafc393c4d43626/a80bd/game.jpg 148w,
+/static/dfa016adf9c891e00dafc393c4d43626/1c91a/game.jpg 295w,
+/static/dfa016adf9c891e00dafc393c4d43626/1c72d/game.jpg 590w,
+/static/dfa016adf9c891e00dafc393c4d43626/a8a14/game.jpg 885w,
+/static/dfa016adf9c891e00dafc393c4d43626/fbd2c/game.jpg 1180w,
+/static/dfa016adf9c891e00dafc393c4d43626/eea4a/game.jpg 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;It was fun seeing it all come together again on the big screen! Oh, and as it was built using web technologies, &lt;a href=&quot;https://www.ketnet.be/spelen/2beat-boeva&quot;&gt;you can also play it online&lt;/a&gt;!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Building Bridges at FITC Amsterdam 2016]]></title><description><![CDATA[After my work on the Kinect2 library for nodejs and electron, I started working on a new conference presentation, which I gave at FITC…]]></description><link>https://blog.aboutme.be/2016/02/28/building-bridges-fitc-ams-2016/</link><guid isPermaLink="false">https://blog.aboutme.be/2016/02/28/building-bridges-fitc-ams-2016/</guid><pubDate>Sun, 28 Feb 2016 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;After my work on the Kinect2 library for nodejs and electron, I started working on a new conference presentation, which I gave at FITC Amsterdam earlier this month. This time, I focussed on building bridges between platforms, covering early experiments with Flash, up to C++ and Nodejs native code:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Flash &amp;#x26; ExternalInterface&lt;/li&gt;
+&lt;li&gt;OSC kinect data&lt;/li&gt;
+&lt;li&gt;Native extensions in Adobe AIR&lt;/li&gt;
+&lt;li&gt;Linking Apple Watch to NodeJS&lt;/li&gt;
+&lt;li&gt;Writing native extensions for NodeJS with NAN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As an extra challenge, I wanted to present using my own slide engine, controlling it with my Apple Watch. The audience was able to follow along on their mobile devices and participate in little interactive experiments on their device (such as measure reaction speed, device shakes, …)&lt;/p&gt;
+&lt;p&gt;I’ve &lt;a href=&quot;https://github.com/wouterverweirder/building-bridges&quot;&gt;uploaded my slide engine and source code on Github&lt;/a&gt;, for your entertainment :-)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Kinect game for live television]]></title><description><![CDATA[That’s a first: my code being used on live tv! A couple of months ago, I was contacted by Joachim from Ketnet. They were building a new…]]></description><link>https://blog.aboutme.be/2015/09/04/kinect-game-for-live-television/</link><guid isPermaLink="false">https://blog.aboutme.be/2015/09/04/kinect-game-for-live-television/</guid><pubDate>Fri, 04 Sep 2015 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s a first: my code being used on live tv! A couple of months ago, I was contacted by Joachim from &lt;a href=&quot;https://ketnet.be&quot;&gt;Ketnet&lt;/a&gt;. They were building a new studio for their kid’s shows, and were looking for an interactive Kinect experience.&lt;/p&gt;
+&lt;p&gt;I did some experiments with Kinect and Flash in the past. But as Flash is kind dying, and front-end C++/C# isn’t really my thing, I wanted to see how far I could take javascript with Kinect.&lt;/p&gt;
+&lt;p&gt;I went ahead and &lt;a href=&quot;https://github.com/wouterverweirder/kinect2&quot;&gt;built a kinect 2 nodejs extension&lt;/a&gt; using C++ and Javascript. In combination with &lt;a href=&quot;https://www.electronjs.org/&quot;&gt;Electron&lt;/a&gt; and &lt;a href=&quot;https://phaser.io/&quot;&gt;PhaserJS&lt;/a&gt;, Koen and I were able to build a fully working, stable Kinect game.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dd12acda117440cbde584fcd312af991/eea4a/gameplay.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 44.5945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIEBf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAVzQXLaCf//EABoQAQEAAgMAAAAAAAAAAAAAAAIDETESIjP/2gAIAQEAAQUC5ZdUS69mPW256//EABYRAQEBAAAAAAAAAAAAAAAAAAACEf/aAAgBAwEBPwGmP//EABcRAQADAAAAAAAAAAAAAAAAAAACETH/2gAIAQIBAT8Bjq3/xAAeEAACAQMFAAAAAAAAAAAAAAAAARICInEDIUGBkf/aAAgBAQAGPwKDXgrVdyONGwsGl2PJ/8QAHBABAAAHAQAAAAAAAAAAAAAAAQAQESExQWGh/9oACAEBAAE/IShAdgmIYaFuQFVLCxJvBIH/2gAMAwEAAgADAAAAEE8P/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEh/9oACAEDAQE/ELTD/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAgEBPxBap7v/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGhUbHw/9oACAEBAAE/EKqBC822YZ0TTIKyxyRXgOhSnJU6L3PgeCdpP//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;kinect gameplay&quot;
+        title=&quot;kinect gameplay&quot;
+        src=&quot;/static/dd12acda117440cbde584fcd312af991/1c72d/gameplay.jpg&quot;
+        srcset=&quot;/static/dd12acda117440cbde584fcd312af991/a80bd/gameplay.jpg 148w,
+/static/dd12acda117440cbde584fcd312af991/1c91a/gameplay.jpg 295w,
+/static/dd12acda117440cbde584fcd312af991/1c72d/gameplay.jpg 590w,
+/static/dd12acda117440cbde584fcd312af991/a8a14/gameplay.jpg 885w,
+/static/dd12acda117440cbde584fcd312af991/fbd2c/gameplay.jpg 1180w,
+/static/dd12acda117440cbde584fcd312af991/eea4a/gameplay.jpg 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I must say, it was a bit stressy when it first went live on Sunday morning (prime time for kids in the weekend!), but everything ran smoothly.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Interactive Light Sculptures]]></title><description><![CDATA[A couple of weeks back, my Happy-Banana partner in crime Koen and I were approached by artist Tom Dekyvere for an interactive sculpture…]]></description><link>https://blog.aboutme.be/2014/11/07/interactive-light-sculptures/</link><guid isPermaLink="false">https://blog.aboutme.be/2014/11/07/interactive-light-sculptures/</guid><pubDate>Fri, 07 Nov 2014 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;A couple of weeks back, my Happy-Banana partner in crime Koen and I were approached by artist &lt;a href=&quot;http://tomandliendekyvere.com/&quot;&gt;Tom Dekyvere&lt;/a&gt; for an interactive sculpture project.&lt;/p&gt;
+&lt;p&gt;He wanted to put interactive artworks at the Catch festival in Utrecht and was looking for a partner to help build the electronics. The sculptures needed to respond with light and sound on the people around. Challenge accepted!&lt;/p&gt;
+&lt;p&gt;We started experimenting with different libraries and electronics, and quickly settled on the &lt;a href=&quot;https://sensorium.github.io/Mozzi/&quot;&gt;Mozzi library&lt;/a&gt; for Arduino Sound synthesis on the software side, together with a maxbotix ultrasonic distance sensor, mosfet and some 12V ledstrips. Our first experiments were promising:&lt;/p&gt;
+&lt;div class=&quot;gatsby-resp-iframe-wrapper&quot; style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; margin-bottom: 1.0725rem&quot; &gt; &lt;iframe src=&quot;https://player.vimeo.com/video/432268662&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen style=&quot; position: absolute; top: 0; left: 0; width: 100%; height: 100%; &quot;&gt;&lt;/iframe&gt; &lt;/div&gt;
+&lt;p&gt;The next step was replicating this 6 times, which proved to take more time than we thought. We finished soldering the final board just when Tom was here to pick up our hardware!&lt;/p&gt;
+&lt;p&gt;Here’s a clip where you can see Tom’s sculptures lighting up and reacting to the audience:&lt;/p&gt;
+&lt;div class=&quot;gatsby-resp-iframe-wrapper&quot; style=&quot;padding-bottom: 42.5%; position: relative; height: 0; overflow: hidden; margin-bottom: 1.0725rem&quot; &gt; &lt;iframe src=&quot;https://player.vimeo.com/video/432275416&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen style=&quot; position: absolute; top: 0; left: 0; width: 100%; height: 100%; &quot;&gt;&lt;/iframe&gt; &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Javascript workout at Reasons to be Creative 2014]]></title><description><![CDATA[After last year’s elevator pitch I was invited back to gave a full talk this year. I wanted to elaborate on javascript and hardware…]]></description><link>https://blog.aboutme.be/2014/09/11/javascript-workout-at-reasons-to-be-creative-2014/</link><guid isPermaLink="false">https://blog.aboutme.be/2014/09/11/javascript-workout-at-reasons-to-be-creative-2014/</guid><pubDate>Tue, 09 Sep 2014 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;After &lt;a href=&quot;/2013/09/05/500-people-controlled-my-arduino-at-reasons-to-be-creative-2013/&quot;&gt;last year’s elevator pitch&lt;/a&gt; I was invited back to gave a full talk this year. I wanted to elaborate on javascript and hardware interaction, while linking everything to a general theme. I went for “physical workouts”, and built some demos that had to do with that.&lt;/p&gt;
+&lt;p&gt;During my talk, I covered different libraries &amp;#x26; hardware platforms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bluetooth LE &amp;#x26; &lt;a href=&quot;https://github.com/noble/noble&quot;&gt;the noble library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pulsesensor.com/&quot;&gt;Pulse Sensor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.kickstarter.com/projects/sparkdevices/spark-core-wi-fi-for-everything-arduino-compatible&quot;&gt;Spark Core&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://johnny-five.io/&quot;&gt;Johnny-five&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cylonjs.com/&quot;&gt;Cylon.JS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tessel.io/&quot;&gt;Tessel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.spacebrew.cc/&quot;&gt;Spacebrew&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I wanted to keep things fun and interactive for the audience as well. So I invited people on stage to play heartrate controlled games and dance mat challenges. All built using javascript!&lt;/p&gt;
+&lt;p&gt;The people from AnalogFolk captured a nice video of one of the demos:&lt;/p&gt;
+&lt;div class=&quot;gatsby-resp-iframe-wrapper&quot; style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; margin-bottom: 1.0725rem&quot; &gt; &lt;iframe src=&quot;https://player.vimeo.com/video/105886639&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen style=&quot; position: absolute; top: 0; left: 0; width: 100%; height: 100%; &quot;&gt;&lt;/iframe&gt; &lt;/div&gt;
+&lt;p&gt;You can &lt;a href=&quot;https://github.com/wouterverweirder/javascript-workout&quot;&gt;find my presentation and demos on Github&lt;/a&gt;. Enjoy!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[500 people controlled my Arduino at Reasons to be Creative 2013]]></title><description><![CDATA[Just got back from the ever brilliant Reasons to be Creative conference in Brighton. I participated in this year’s elevator pitch (20 back…]]></description><link>https://blog.aboutme.be/2013/09/05/500-people-controlled-my-arduino-at-reasons-to-be-creative-2013/</link><guid isPermaLink="false">https://blog.aboutme.be/2013/09/05/500-people-controlled-my-arduino-at-reasons-to-be-creative-2013/</guid><pubDate>Thu, 05 Sep 2013 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;Just got back from the ever brilliant Reasons to be Creative conference in Brighton. I participated in this year’s elevator pitch (20 back to back 3-minute presentations!), had a ton of stress (and fun) presenting on the main stage!&lt;/p&gt;
+&lt;p&gt;I wanted to share some of the work I’ve been doing with javascript and hardware.&lt;/p&gt;
+&lt;p&gt;One of my side projects the last couple of months was building a better remote for my television and setop box. I was frustrated each time I wanted to watch tv, I had to use 3 different remotes to turn on the tv, turn on my surround system and control the digital tv setop box. So I grabbed an Arduino some IR leds and started soldering where IR control wasn’t possible.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a97f5c6c89a3f54c567de964b7ce610c/eea4a/soldering.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAWAQEBAQAAAAAAAAAAAAAAAAADAQL/2gAMAwEAAhADEAAAAcDS2a0kNP/EABkQAQADAQEAAAAAAAAAAAAAAAEAAgMSMf/aAAgBAQABBQJzWVOJyTZQosr5/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/AVyf/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BJ//EABkQAQADAQEAAAAAAAAAAAAAAAEAECESMf/aAAgBAQAGPwLpGYe1kCv/xAAbEAEAAwADAQAAAAAAAAAAAAABABEhMUFRkf/aAAgBAQABPyHJH2ghJsqBzn5DNkhi7F7mo//aAAwDAQACAAMAAAAQ6+//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREx/9oACAEDAQE/ELJBYf/EABgRAAIDAAAAAAAAAAAAAAAAAAABESEx/9oACAECAQE/ELKWPT//xAAbEAEAAgMBAQAAAAAAAAAAAAABABEhMWGxwf/aAAgBAQABPxCtoWjL7K2ol3hPvYCSxotQRnwhp6wSNyTL2ERQtWf/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;soldering the on/off button&quot;
+        title=&quot;soldering the on/off button&quot;
+        src=&quot;/static/a97f5c6c89a3f54c567de964b7ce610c/1c72d/soldering.jpg&quot;
+        srcset=&quot;/static/a97f5c6c89a3f54c567de964b7ce610c/a80bd/soldering.jpg 148w,
+/static/a97f5c6c89a3f54c567de964b7ce610c/1c91a/soldering.jpg 295w,
+/static/a97f5c6c89a3f54c567de964b7ce610c/1c72d/soldering.jpg 590w,
+/static/a97f5c6c89a3f54c567de964b7ce610c/a8a14/soldering.jpg 885w,
+/static/a97f5c6c89a3f54c567de964b7ce610c/fbd2c/soldering.jpg 1180w,
+/static/a97f5c6c89a3f54c567de964b7ce610c/eea4a/soldering.jpg 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I hooked up the Arduino to a raspberry pi, running a nodejs server. Next up I built a little javascript app to trigger Arduino commands. Et voila: sending different commands in one easy web interface&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f5582108732b211baf164bf06c309b5b/eea4a/remote.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAQpBuI58X//EABkQAQADAQEAAAAAAAAAAAAAAAEAAgMSE//aAAgBAQABBQLPMQpnxLKBSs86T//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AVf/xAAbEAACAgMBAAAAAAAAAAAAAAAAARExAhASQf/aAAgBAQAGPwJ9EpJ+6xhlFH//xAAZEAADAQEBAAAAAAAAAAAAAAAAAREhMdH/2gAIAQEAAT8hfiWKje6OPDja5pdBVbGQB2P/2gAMAwEAAgADAAAAEPAv/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oACAEDAQE/EImv/8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAECAQE/EHA//8QAHBABAAICAwEAAAAAAAAAAAAAAQARITFBUWFx/9oACAEBAAE/EHKOrTRdWHsusaHC/XQaribosIrrMKD6wheY4Gm9s4hn1n//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;a remote built with web technology&quot;
+        title=&quot;a remote built with web technology&quot;
+        src=&quot;/static/f5582108732b211baf164bf06c309b5b/1c72d/remote.jpg&quot;
+        srcset=&quot;/static/f5582108732b211baf164bf06c309b5b/a80bd/remote.jpg 148w,
+/static/f5582108732b211baf164bf06c309b5b/1c91a/remote.jpg 295w,
+/static/f5582108732b211baf164bf06c309b5b/1c72d/remote.jpg 590w,
+/static/f5582108732b211baf164bf06c309b5b/a8a14/remote.jpg 885w,
+/static/f5582108732b211baf164bf06c309b5b/fbd2c/remote.jpg 1180w,
+/static/f5582108732b211baf164bf06c309b5b/eea4a/remote.jpg 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;My tv was a little too big to bring with me on stage, and I wanted to do something interactive with the entire audience. So I built some ledstrips into two lego cars, to recreate the KITT (Knightrider) led effect. The audience was randomly divided into two groups (car A or car B). People had to shake their phones as hard as they could during 30 seconds. The total energy of the group was mapped to the speed of the led effect, and in the end one of the two cars “won”.&lt;/p&gt;
+&lt;p&gt;I was quite nervous if it was going to work, because I hadn’t been able to test this setup with hundreds of people at once. But luckely the WiFi gods were benevolent, and everything worked as it should :-)&lt;/p&gt;
+&lt;p&gt;It was great to hear all the lovely feedback afterwards, and to hear that my talk was picked to give a full presentation next year!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AIR Native extension for simple speech recognition on OSX]]></title><description><![CDATA[Today I played around a bit with speech recognition on OSX. One of the things I did, was create a simple bridge between Adobe AIR and the…]]></description><link>https://blog.aboutme.be/2012/04/19/air-native-extension-for-simple-speech-recognition-on-osx/</link><guid isPermaLink="false">https://blog.aboutme.be/2012/04/19/air-native-extension-for-simple-speech-recognition-on-osx/</guid><pubDate>Thu, 19 Apr 2012 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I played around a bit with speech recognition on OSX. One of the things I did, was create a simple bridge between Adobe AIR and the NSSpeechRecognizer API on OSX. This api allows you to set a predefined list of commands, and listen for those spoken commands.&lt;/p&gt;
 &lt;p&gt;The API is quite simple, and so is the native extension api. After including the ANE file, you’ll create an instance of the bridge:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;actionscript&quot;&gt;&lt;pre class=&quot;language-actionscript&quot;&gt;&lt;code class=&quot;language-actionscript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; nsSpeechRecognizerBridge&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;NSSpeechRecognizerBridge &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;NSSpeechRecognizerBridge&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;After that, you add a list of valid commands:&lt;/p&gt;
