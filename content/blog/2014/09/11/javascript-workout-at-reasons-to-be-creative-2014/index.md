@@ -1,7 +1,7 @@
 ---
 title: Javascript workout at Reasons to be Creative 2014
 author: 'wouter'
-date: 2014-09-9T00:10:00.000Z
+date: 2014-09-09T00:10:00.000Z
 cover: ./preview.jpg
 hasCover: true
 description: false
