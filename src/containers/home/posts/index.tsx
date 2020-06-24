@@ -38,6 +38,7 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
               title
               description
               tags
+              hasCover
               cover {
                 childImageSharp {
                   fluid(maxWidth: 325, maxHeight: 325, quality: 90) {
@@ -62,6 +63,7 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
       {Posts.map(({ node }: any) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
+          <>
           <PostCardMinimal
             key={node.fields.slug}
             title={title}
@@ -75,6 +77,7 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
             date={node.frontmatter.date}
             tags={node.frontmatter.tags}
           />
+          </>
         );
       })}
 

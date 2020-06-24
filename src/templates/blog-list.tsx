@@ -80,6 +80,7 @@ export const pageQuery = graphql`
             title
             description
             tags
+            hasCover
             cover {
               childImageSharp {
                 fluid(maxWidth: 170, maxHeight: 170, quality: 90) {

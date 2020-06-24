@@ -5,10 +5,10 @@ export const PostCardWrapper = styled.div`
   position: relative;
   &:hover {
     .post_preview {
-      // transform: translateY(0);
+      transform: translateY(0);
     }
     .post_date {
-      // transform: translateY(100%);
+      transform: translateY(100%);
     }
   }
 `;
