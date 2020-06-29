@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AboutMe.be]]></title><description><![CDATA[My personal blog]]></description><link>https://blog.aboutme.be</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 29 Jun 2020 14:43:12 GMT</lastBuildDate><item><title><![CDATA[Quick Hack, Timing an Air Pump with Arduino]]></title><description><![CDATA[Yesterday morning I saw a call for help by Maud Vanhauwaert, Antwerp’s city poet. For a new city poem / installation she was looking for a…]]></description><link>https://blog.aboutme.be/2018/10/10/quick-hack-timing-air-pump-with-arduino/</link><guid isPermaLink="false">https://blog.aboutme.be/2018/10/10/quick-hack-timing-air-pump-with-arduino/</guid><pubDate>Wed, 10 Oct 2018 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;Yesterday morning I saw a call for help by &lt;a href=&quot;https://www.maudvanhauwaert.be/&quot;&gt;Maud Vanhauwaert&lt;/a&gt;, Antwerp’s city poet. For a new city poem / installation she was looking for a solution to time inflation and deflation of big letters, spelling the word “Macht” (which translates to “Power” in English).&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AboutMe.be]]></title><description><![CDATA[My personal blog]]></description><link>https://blog.aboutme.be</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 29 Jun 2020 15:36:52 GMT</lastBuildDate><item><title><![CDATA[Azure Kinect Library for Node and Electron]]></title><description><![CDATA[A couple of weeks ago, my Kinect for Azure arrived (thank you Lisa Jamhoury to shipping me one!). And: oh my god, it is so tiny, compared to…]]></description><link>https://blog.aboutme.be/2019/12/07/azure-kinect-library-for-node-and-electron/</link><guid isPermaLink="false">https://blog.aboutme.be/2019/12/07/azure-kinect-library-for-node-and-electron/</guid><pubDate>Sat, 07 Dec 2019 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;A couple of weeks ago, my Kinect for Azure arrived (thank you &lt;a href=&quot;http://lisajamhoury.com/&quot;&gt;Lisa Jamhoury&lt;/a&gt; to shipping me one!). And: oh my god, it is so tiny, compared to the Kinect 2!&lt;/p&gt;
+&lt;p&gt;The size does seem to come with a prize: you need a beefy computer + GPU in order to get decent skeletron tracking performance. The reason behind this is the skeleton tracking is now happing through CUDA accelerated Machine Learning models. Not quite sure about this approach, as the load on your system is quite high, and the gains in tracking seem only marginal compared to the Kinect v1.&lt;/p&gt;
+&lt;p&gt;I quickly went ahead and started putting together a nodejs native extension to access the data from the Kinect. In my Kinect2 extension, I was using the &lt;a href=&quot;https://github.com/nodejs/nan&quot;&gt;native abstractions for nodejs package a.k.a. nan&lt;/a&gt;. But since then, there’s a &lt;a href=&quot;https://nodejs.org/api/addons.html#addons_n_api&quot;&gt;new way of building native nodejs extensions, through N-API&lt;/a&gt;. The benefit of this is ABI stability: no more need to recompile for different nodejs or electron versions! So I wanted to go for that approach for my new library.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ec5000008b3b86adce7f7f951d5a2354/90a02/screenshot.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAbJUSBenaP/EABsQAAIDAAMAAAAAAAAAAAAAAAECAAMSBBQh/9oACAEBAAEFAnbCtyMN2jLlD1n0BZ//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAACAgMAAAAAAAAAAAAAAAAAARExAiEy/9oACAEBAAY/ApIdnJDMG3tFs//EABoQAAMBAQEBAAAAAAAAAAAAAAABETEhUZH/2gAIAQEAAT8hwV7CYpViOmPp3FKsFb2dJhp7H//aAAwDAQACAAMAAAAQ4+//xAAVEQEBAAAAAAAAAAAAAAAAAAAQIf/aAAgBAwEBPxCH/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Qh//EAB0QAQACAgIDAAAAAAAAAAAAAAERIQBRQdExYaH/2gAIAQEAAT8QrjpAErLhcztkeO8ZR43brHtqloayD7lJ6GtBiWDmUSV8z//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;screenshot of demo app&quot;
+        title=&quot;screenshot of demo app&quot;
+        src=&quot;/static/ec5000008b3b86adce7f7f951d5a2354/1c72d/screenshot.jpg&quot;
+        srcset=&quot;/static/ec5000008b3b86adce7f7f951d5a2354/a80bd/screenshot.jpg 148w,
+/static/ec5000008b3b86adce7f7f951d5a2354/1c91a/screenshot.jpg 295w,
+/static/ec5000008b3b86adce7f7f951d5a2354/1c72d/screenshot.jpg 590w,
+/static/ec5000008b3b86adce7f7f951d5a2354/a8a14/screenshot.jpg 885w,
+/static/ec5000008b3b86adce7f7f951d5a2354/fbd2c/screenshot.jpg 1180w,
+/static/ec5000008b3b86adce7f7f951d5a2354/90a02/screenshot.jpg 1293w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&quot;https://github.com/wouterverweirder/kinect-azure&quot;&gt;find my azure kinect for nodejs/electron library on Github&lt;/a&gt;. Right now it has the following features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;get rgb camera feed&lt;/li&gt;
+&lt;li&gt;get depth feed&lt;/li&gt;
+&lt;li&gt;get ir feed&lt;/li&gt;
+&lt;li&gt;transform between color and depth feed&lt;/li&gt;
+&lt;li&gt;point cloud (greyscale and colored)&lt;/li&gt;
+&lt;li&gt;get skeleton joints (2d and 3d)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Stay tuned for further updates, such as user masking and accessing other sensor data (accelerometer, temperature, …)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Quick Hack, Timing an Air Pump with Arduino]]></title><description><![CDATA[Yesterday morning I saw a call for help by Maud Vanhauwaert, Antwerp’s city poet. For a new city poem / installation she was looking for a…]]></description><link>https://blog.aboutme.be/2018/10/10/quick-hack-timing-air-pump-with-arduino/</link><guid isPermaLink="false">https://blog.aboutme.be/2018/10/10/quick-hack-timing-air-pump-with-arduino/</guid><pubDate>Wed, 10 Oct 2018 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;Yesterday morning I saw a call for help by &lt;a href=&quot;https://www.maudvanhauwaert.be/&quot;&gt;Maud Vanhauwaert&lt;/a&gt;, Antwerp’s city poet. For a new city poem / installation she was looking for a solution to time inflation and deflation of big letters, spelling the word “Macht” (which translates to “Power” in English).&lt;/p&gt;
 &lt;p&gt;On the shelf timers didn’t work for the timing she had in mind. I attended high school with Maud, saw her call for help on Facebook and started hacking together a solution for her with an Arduino and a relay. It needed to happen quickly (the installation went live today), so I shipped it to her in a plastic box from some take away food. One side of the box plugs into the mains outlet, the other side is a mains socket which is controlled by the relay and Arduino.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
