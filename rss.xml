@@ -1,4 +1,120 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AboutMe.be]]></title><description><![CDATA[My personal blog]]></description><link>https://blog.aboutme.be</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 29 Jun 2020 15:36:52 GMT</lastBuildDate><item><title><![CDATA[Azure Kinect Library for Node and Electron]]></title><description><![CDATA[A couple of weeks ago, my Kinect for Azure arrived (thank you Lisa Jamhoury to shipping me one!). And: oh my god, it is so tiny, compared to…]]></description><link>https://blog.aboutme.be/2019/12/07/azure-kinect-library-for-node-and-electron/</link><guid isPermaLink="false">https://blog.aboutme.be/2019/12/07/azure-kinect-library-for-node-and-electron/</guid><pubDate>Sat, 07 Dec 2019 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;A couple of weeks ago, my Kinect for Azure arrived (thank you &lt;a href=&quot;http://lisajamhoury.com/&quot;&gt;Lisa Jamhoury&lt;/a&gt; to shipping me one!). And: oh my god, it is so tiny, compared to the Kinect 2!&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AboutMe.be]]></title><description><![CDATA[My personal blog]]></description><link>https://blog.aboutme.be</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 13 Apr 2021 14:35:01 GMT</lastBuildDate><item><title><![CDATA[Building a laptop-driven 8-screen installation]]></title><description><![CDATA[To present work of this year’s Devine graduates, we wanted to do something more. After a brainstorming session, we ended up with presenting…]]></description><link>https://blog.aboutme.be/2020/12/15/building-a-laptop-driven-8-screen-installation/</link><guid isPermaLink="false">https://blog.aboutme.be/2020/12/15/building-a-laptop-driven-8-screen-installation/</guid><pubDate>Tue, 15 Dec 2020 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;To present work of this year’s Devine graduates, we wanted to do something more. After a brainstorming session, we ended up with presenting their work on an 8-screen setup. We want to use these 8 screens in a dynamic way: sometimes they’ll form one big viewport on an image or video, in other scenarios each screen will contain an image or text on it’s own. We want to be able to animate content between the screens.&lt;/p&gt;
+&lt;p&gt;Resolution on each of the screens should be as high as possible, and we wanted a “random”, flexible screen layout. Next up, it should have an interactive element: using a big button or other interactions, visitors should be able to browse through content.&lt;/p&gt;
+&lt;p&gt;After doing some technical research, I ended up with a couple of possible approaches:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using multiple output ports, with &lt;a href=&quot;https://www.nvidia.com/en-us/design-visualization/solutions/nvidia-mosaic-technology/&quot;&gt;nvidia mosaic&lt;/a&gt;, where we’d build a desktop machine with 2 quadro P4000 GPUs. These GPU’s alone cost around 950 EUR each, but can support 4 displays at Full HD each.&lt;/li&gt;
+&lt;li&gt;Using a video splitter, such as &lt;a href=&quot;https://www.amazon.com/Video-Controller-Switcher-Processor-Splitter/dp/B0818SNSKF?ref_=ast_sto_dp&quot;&gt;the 3x3 video wall 4k controller&lt;/a&gt; - we could drive up to 9 screens with this, even from a laptop. With some creative splitting, we might be able to send 2 4K sources into the splitter, to ensure high resolution output. The price (2.999,00 USD, without import taxes) is beafy though…&lt;/li&gt;
+&lt;li&gt;Using a combination of Raspberry PI’s with custom playback software. Hardware price would be the cheapest, but getting content in sync over all screens could be troubling. I’m also worried about the setup process, and want to avoid troubleshooting with 8 different Raspberry PI’s that need to run stable for longer periods and in sync with each other.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the end I went with &lt;a href=&quot;https://www.amazon.de/gp/product/B087DT29LM/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&amp;#x26;psc=1&quot;&gt;2 cheaper Startech ST124HDVW 4K splitters&lt;/a&gt;, which are available in Europe. The benefit of this approach, is that it’s more flexible than using a dedicated desktop pc with beafy GPUs: it can split one 4K HDMI input to 4 screens - this input could be coming from anywhere: a Mac, PC, Raspberry PI, laptop, desktop, … all of our existing laptops are able to output at least 2 4K HDMI streams, and could work as an input for the installation.&lt;/p&gt;
+&lt;h1&gt;The software&lt;/h1&gt;
+&lt;p&gt;We need software to match the expected output as well. Each of the 4K splitters identifies as a 4K screen, and splits the signal into 4 Full HD signals. Here’s an example of connecting one splitter to my Macbook Pro, you’ll see the 4 screens together display as a big second screen:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3027f2b4475c96e17482b6a23bdf235a/eea4a/4-screens-desktop.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 73.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAE/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAHKT6COey//xAAaEAADAQEBAQAAAAAAAAAAAAABAgMAExES/9oACAEBAAEFAnp5XoSEcfAfpgs4YRFN/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAHhAAAgEDBQAAAAAAAAAAAAAAAAERAhIhECMxMkH/2gAIAQEABj8CemR0R29jg3FdJdQsM//EABoQAAIDAQEAAAAAAAAAAAAAAAERACFBMVH/2gAIAQEAAT8hrrIyNRVX5F2tjSVgAgQOWuK5BSg5Dyf/2gAMAwEAAgADAAAAEMz/AP/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPxCMf//EABYRAQEBAAAAAAAAAAAAAAAAAAABMf/aAAgBAgEBPxCrr//EABwQAQACAwADAAAAAAAAAAAAAAEAESFBUTGB4f/aAAgBAQABPxBENPg1jdwAUWyAX2VVNduw1XHBBvVHrMUXQGS8JGi+VSuKn//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;4 screens as one big screen&quot;
+        title=&quot;4 screens as one big screen&quot;
+        src=&quot;/static/3027f2b4475c96e17482b6a23bdf235a/1c72d/4-screens-desktop.jpg&quot;
+        srcset=&quot;/static/3027f2b4475c96e17482b6a23bdf235a/a80bd/4-screens-desktop.jpg 148w,
+/static/3027f2b4475c96e17482b6a23bdf235a/1c91a/4-screens-desktop.jpg 295w,
+/static/3027f2b4475c96e17482b6a23bdf235a/1c72d/4-screens-desktop.jpg 590w,
+/static/3027f2b4475c96e17482b6a23bdf235a/a8a14/4-screens-desktop.jpg 885w,
+/static/3027f2b4475c96e17482b6a23bdf235a/fbd2c/4-screens-desktop.jpg 1180w,
+/static/3027f2b4475c96e17482b6a23bdf235a/eea4a/4-screens-desktop.jpg 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The first step I wanted to cover, was creating an output that spans 2 displays, and being able to put content on each of the separte displays. When the displays are lined up nicely, this is a pretty easy task: just make each output “pane” full hd, and put on either at the start or halfway on the screen.&lt;/p&gt;
+&lt;p&gt;The tricky part here is getting a good framerate driving this 2x4K output. We want to be able to output animated content on each screen, and transition content between screens. Regular pixel-manipulation on a 2D canvas was a no-go (ended around 16fps here), WebGL allowed for smooth 60fps content:&lt;/p&gt;
+&lt;div class=&quot;gatsby-resp-iframe-wrapper&quot; style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; margin-bottom: 1.0725rem&quot; &gt; &lt;iframe src=&quot;https://www.youtube.com/embed/pWddojxSy3A&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen style=&quot; position: absolute; top: 0; left: 0; width: 100%; height: 100%; &quot;&gt;&lt;/iframe&gt; &lt;/div&gt;
+&lt;p&gt;The installation itself needs a more flexible setup: it won’t have 8 identical screens next to eachother, but will have a setup with screens of different sizes and orientations. So: the physical setup of the screens doesnt’ match the output right now. I needed to create a virtual representation of the physical setup, and put the output for each screen on a fixed spot, in order for the splitter to put that signal to the correct screen.&lt;/p&gt;
+&lt;p&gt;I ended up with a solution using 8 ThreeJS OrthographicCameras, which render their view to the fixed output positions.&lt;/p&gt;
+&lt;p&gt;The virtual setup looks something like this:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/063e47bb57e48375af6b71523b8c9a2b/eea4a/editor.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAgABBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHqLyDKr//EABkQAAIDAQAAAAAAAAAAAAAAAAACARARIf/aAAgBAQABBQI6JsLf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAgMAAAAAAAAAAAAAAAAAAAERIDH/2gAIAQEABj8CNIbp/8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAQRAhYf/aAAgBAQABPyFqnDokZ5ADYNmHP//aAAwDAQACAAMAAAAQCB//xAAWEQEBAQAAAAAAAAAAAAAAAAAAIQH/2gAIAQMBAT8Qba//xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQIBAT8QsY//xAAbEAEAAgIDAAAAAAAAAAAAAAABABExgRBBYf/aAAgBAQABPxByaISg4NJSvNR9B9i2zJiDVg1jj//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;view of the threejs scene&quot;
+        title=&quot;view of the threejs scene&quot;
+        src=&quot;/static/063e47bb57e48375af6b71523b8c9a2b/1c72d/editor.jpg&quot;
+        srcset=&quot;/static/063e47bb57e48375af6b71523b8c9a2b/a80bd/editor.jpg 148w,
+/static/063e47bb57e48375af6b71523b8c9a2b/1c91a/editor.jpg 295w,
+/static/063e47bb57e48375af6b71523b8c9a2b/1c72d/editor.jpg 590w,
+/static/063e47bb57e48375af6b71523b8c9a2b/a8a14/editor.jpg 885w,
+/static/063e47bb57e48375af6b71523b8c9a2b/fbd2c/editor.jpg 1180w,
+/static/063e47bb57e48375af6b71523b8c9a2b/eea4a/editor.jpg 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And this single threejs scene is rendered with 8 orthographic cameras to the following 2x4K output, which is propertly aligned for the 4K splitters.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bf40b4dca041243b2f619eb3d4982137/eea4a/output.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 28.37837837837838%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAA//aAAwDAQACEAMQAAABnYBZgzf/xAAXEAEBAQEAAAAAAAAAAAAAAAABAgMR/9oACAEBAAEFAq24kGmFQD//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Bra//xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAIAQIBAT8BMk3/xAAZEAACAwEAAAAAAAAAAAAAAAAAARESIVH/2gAIAQEABj8CWF+og//EABcQAQEBAQAAAAAAAAAAAAAAAAERACH/2gAIAQEAAT8hc/VZq3RRhpMrv//aAAwDAQACAAMAAAAQdD//xAAXEQADAQAAAAAAAAAAAAAAAAAAARFh/9oACAEDAQE/EGcNj//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAgEBPxCuzJF3/8QAGRABAAMBAQAAAAAAAAAAAAAAAQARMSFh/9oACAEBAAE/EKcbS07sZO7EKN8nLOOrWz//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;view of the output&quot;
+        title=&quot;view of the output&quot;
+        src=&quot;/static/bf40b4dca041243b2f619eb3d4982137/1c72d/output.jpg&quot;
+        srcset=&quot;/static/bf40b4dca041243b2f619eb3d4982137/a80bd/output.jpg 148w,
+/static/bf40b4dca041243b2f619eb3d4982137/1c91a/output.jpg 295w,
+/static/bf40b4dca041243b2f619eb3d4982137/1c72d/output.jpg 590w,
+/static/bf40b4dca041243b2f619eb3d4982137/a8a14/output.jpg 885w,
+/static/bf40b4dca041243b2f619eb3d4982137/fbd2c/output.jpg 1180w,
+/static/bf40b4dca041243b2f619eb3d4982137/eea4a/output.jpg 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And here’s how this looks in real life:&lt;/p&gt;
+&lt;div class=&quot;gatsby-resp-iframe-wrapper&quot; style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; margin-bottom: 1.0725rem&quot; &gt; &lt;iframe src=&quot;https://www.youtube.com/embed/2dhGtnLgCHc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen style=&quot; position: absolute; top: 0; left: 0; width: 100%; height: 100%; &quot;&gt;&lt;/iframe&gt; &lt;/div&gt;
+&lt;p&gt;The project is still a work in progress, but already happy with some of the technical hurdles that were taken :-)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Azure Kinect Library for Node and Electron]]></title><description><![CDATA[A couple of weeks ago, my Kinect for Azure arrived (thank you Lisa Jamhoury to shipping me one!). And: oh my god, it is so tiny, compared to…]]></description><link>https://blog.aboutme.be/2019/12/07/azure-kinect-library-for-node-and-electron/</link><guid isPermaLink="false">https://blog.aboutme.be/2019/12/07/azure-kinect-library-for-node-and-electron/</guid><pubDate>Sat, 07 Dec 2019 00:10:00 GMT</pubDate><content:encoded>&lt;p&gt;A couple of weeks ago, my Kinect for Azure arrived (thank you &lt;a href=&quot;http://lisajamhoury.com/&quot;&gt;Lisa Jamhoury&lt;/a&gt; to shipping me one!). And: oh my god, it is so tiny, compared to the Kinect 2!&lt;/p&gt;
 &lt;p&gt;The size does seem to come with a prize: you need a beefy computer + GPU in order to get decent skeletron tracking performance. The reason behind this is the skeleton tracking is now happing through CUDA accelerated Machine Learning models. Not quite sure about this approach, as the load on your system is quite high, and the gains in tracking seem only marginal compared to the Kinect v1.&lt;/p&gt;
 &lt;p&gt;I quickly went ahead and started putting together a nodejs native extension to access the data from the Kinect. In my Kinect2 extension, I was using the &lt;a href=&quot;https://github.com/nodejs/nan&quot;&gt;native abstractions for nodejs package a.k.a. nan&lt;/a&gt;. But since then, there’s a &lt;a href=&quot;https://nodejs.org/api/addons.html#addons_n_api&quot;&gt;new way of building native nodejs extensions, through N-API&lt;/a&gt;. The benefit of this is ABI stability: no more need to recompile for different nodejs or electron versions! So I wanted to go for that approach for my new library.&lt;/p&gt;
 &lt;p&gt;&lt;span
