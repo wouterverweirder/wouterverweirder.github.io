@@ -15,6 +15,8 @@ tags:
 ---
 To present work of this year's Devine graduates, we wanted to do something more. After a brainstorming session, we ended up with presenting their work on an 8-screen setup. We want to use these 8 screens in a dynamic way: sometimes they'll form one big viewport on an image or video, in other scenarios each screen will contain an image or text on it's own. We want to be able to animate content between the screens.
 
+[**Update: read up on the final project in my other post**](/2021/07/06/making-of-devine-graduation-show-installation/).
+
 Resolution on each of the screens should be as high as possible, and we wanted a "random", flexible screen layout. Next up, it should have an interactive element: using a big button or other interactions, visitors should be able to browse through content.
 
 After doing some technical research, I ended up with a couple of possible approaches:
