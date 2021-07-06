@@ -41,3 +41,9 @@ The application itself displayed the works of 25 graduates, content input happen
 Check out a small preview of the running setup:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-KXYGIn6faQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Team
+- UI / Motion Design: [Frédéric Baert](https://www.linkedin.com/in/fredericbaert/)
+- Content: [Giliam Ganzevles](https://www.linkedin.com/in/giliam-ganzevles/), [Cami Bosschaert](https://www.linkedin.com/in/cami-bosschaert/)
+- Cabinet: [Simon Vanherweghe](https://www.linkedin.com/in/simonvanherweghe/)
+- Software: [Wouter Verweirder](https://www.linkedin.com/in/aboutwouter/)
