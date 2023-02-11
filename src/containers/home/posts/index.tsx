@@ -16,10 +16,7 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
       }
       allSitePage(filter: { path: { eq: "/page/1" } }) {
         nodes {
-          context {
-            numPages
-            currentPage
-          }
+          pageContext
         }
       }
       allMarkdownRemark(
@@ -34,16 +31,17 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
               slug
             }
             frontmatter {
-              date(formatString: "DD [<span>] MMM YYYY [</span>]")
+              date(formatString: "DD [<span>] MMM [</span>]")
               title
               description
               tags
-              hasCover
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 325, maxHeight: 325, quality: 90) {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                  }
+                  gatsbyImageData(
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
                 }
               }
             }
@@ -54,12 +52,12 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
   `);
 
   const Posts = Data.allMarkdownRemark.edges;
-  const TotalPage = Data.allSitePage.nodes[0].context.numPages;
-  const CurrentPage = Data.allSitePage.nodes[0].context.currentPage;
+  const TotalPage = Data?.allSitePage?.nodes[0]?.pageContext?.numPages;
+  const CurrentPage = Data?.allSitePage?.nodes[0]?.pageContext?.currentPage;
 
   return (
     <BlogPostsWrapper>
-      <SecTitle>Latest Posts</SecTitle>
+      <SecTitle>Leatest Stories</SecTitle>
       {Posts.map(({ node }: any) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
@@ -67,9 +65,9 @@ const Posts: React.FunctionComponent<PostsProps> = () => {
             key={node.fields.slug}
             title={title}
             image={
-              node.frontmatter.hasCover
-                ? node.frontmatter.cover.childImageSharp.fluid
-                : null
+              node.frontmatter.cover == null
+                ? null
+                : node.frontmatter.cover.childImageSharp.gatsbyImageData
             }
             url={node.fields.slug}
             description={node.frontmatter.description || node.excerpt}

@@ -3,6 +3,13 @@ import { themeGet } from '@styled-system/theme-get';
 
 export const PostCardWrapper = styled.div`
   position: relative;
+  .post_preview {
+    > a {
+      display: block;
+      overflow: hidden;
+      height: 100%;
+    }
+  }
   &:hover {
     .post_preview {
       transform: translateY(0);

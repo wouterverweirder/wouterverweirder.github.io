@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import _ from 'lodash';
-import Img from 'gatsby-image';
+import GatsbyImage from '../../components/gatsby-image';
 import {
   PostCardWrapper,
   PostPreview,
@@ -21,7 +21,6 @@ interface PostCardProps {
   date?: string;
   tags?: [];
   className?: string;
-  imageType?: 'fixed' | 'fluid';
 }
 
 const PostCard: React.FunctionComponent<PostCardProps> = ({
@@ -32,7 +31,6 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({
   date,
   tags,
   className,
-  imageType,
   ...props
 }) => {
   // Add all classs to an array
@@ -48,11 +46,7 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({
       {image == null ? null : (
         <PostPreview className="post_preview">
           <Link to={url}>
-            {imageType === 'fluid' ? (
-              <Img fluid={image} alt="post preview" />
-            ) : (
-              <Img fixed={image} alt="post preview" />
-            )}
+            <GatsbyImage src={image} alt="post preview" />
           </Link>
         </PostPreview>
       )}
@@ -93,10 +87,6 @@ const PostCard: React.FunctionComponent<PostCardProps> = ({
       </PostDetails>
     </PostCardWrapper>
   );
-};
-
-PostCard.defaultProps = {
-  imageType: 'fluid',
 };
 
 export default PostCard;

@@ -9,8 +9,8 @@ const AboutPage: React.FunctionComponent<AboutPageProps> = (props) => {
   return (
     <Layout>
       <SEO
-        title="About Us"
-        description="StoryHub is a beautiful Gatsby Blog theme designed to showcase your work in style. Perfect for designers, artists, photographers and developers to use for their portfolio website."
+        title="About Wouter"
+        description="Wouter Verweirder is a faculty member of the Technical University of West-Flanders (HOWEST). He is also owner of a company called Happy Banana."
       />
 
       <About />

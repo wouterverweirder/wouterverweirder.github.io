@@ -30,9 +30,11 @@ function Search() {
               tags
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 62, maxHeight: 62, quality: 90) {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                  }
+                  gatsbyImageData(
+                    layout: FULL_WIDTH
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
                 }
               }
             }
@@ -114,7 +116,7 @@ function Search() {
                   title={item.title}
                   url={item.slug}
                   image={
-                    item.cover == null ? null : item.cover.childImageSharp.fluid
+                    item.cover == null ? null : item.cover.childImageSharp.gatsbyImageData
                   }
                   date={item.date}
                   tags={item.tags}

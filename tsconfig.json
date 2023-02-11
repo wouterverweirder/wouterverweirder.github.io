@@ -16,7 +16,8 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "typeRoots": ["../../node_modules/@types", "./@types"]
-  }
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["@types/**/*.*", "src/**/*.*"]
 }

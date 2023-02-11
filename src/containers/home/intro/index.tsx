@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
+import GatsbyImage from '../../../components/gatsby-image';
 import SocialProfile from '../../../components/social-profile/social-profile';
 import {
   IntroWrapper,
@@ -26,14 +26,14 @@ const SocialLinks = [
     tooltip: 'Instagram',
   },
   {
-    icon: <IoLogoTwitter />,
-    url: 'https://twitter.com/wouter',
-    tooltip: 'Twitter',
-  },
-  {
     icon: <IoLogoGithub />,
     url: 'https://github.com/wouterverweirder/',
     tooltip: 'Github',
+  },
+  {
+    icon: <IoLogoTwitter />,
+    url: 'https://twitter.com/wouter',
+    tooltip: 'Twitter',
   },
   {
     icon: <IoLogoLinkedin />,
@@ -47,9 +47,11 @@ const Intro: React.FunctionComponent<IntroProps> = () => {
     query {
       avatar: file(absolutePath: { regex: "/author.jpg/" }) {
         childImageSharp {
-          fluid(maxWidth: 210, maxHeight: 210, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
       site {
@@ -62,12 +64,12 @@ const Intro: React.FunctionComponent<IntroProps> = () => {
   `);
 
   const { author, about } = Data.site.siteMetadata;
-  const AuthorImage = Data.avatar.childImageSharp.fluid;
+  const AuthorImage = Data.avatar.childImageSharp.gatsbyImageData;
 
   return (
     <IntroWrapper>
       <IntroImage>
-        <Image fluid={AuthorImage} alt="author" />
+        <GatsbyImage src={AuthorImage} alt="author" />
       </IntroImage>
       <IntroInfo>
         <IntroTitle>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Img from 'gatsby-image';
+import GatsbyImage from '../../components/gatsby-image';
 import { Link } from 'gatsby';
 import _ from 'lodash';
 import {
@@ -48,7 +48,7 @@ const PostDetails: React.FunctionComponent<PostDetailsProps> = ({
         <>
           {preview == null ? null : (
             <PostPreview className="post_preview">
-              <Img fluid={preview} alt={title} />
+              <GatsbyImage src={preview} alt={title} />
             </PostPreview>
           )}
         </>
@@ -69,7 +69,7 @@ const PostDetails: React.FunctionComponent<PostDetailsProps> = ({
         <>
           {preview == null ? null : (
             <PostPreview className="post_preview">
-              <Img fluid={preview} alt={title} />
+              <GatsbyImage src={preview} alt={title} />
             </PostPreview>
           )}
         </>

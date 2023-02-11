@@ -39,11 +39,9 @@ const BlogPostTemplate = (props: any) => {
   const siteUrl = props.data.site.siteMetadata.siteUrl;
   const shareUrl = urljoin(siteUrl, slug);
 
-  const disqusUrl = urljoin('http://blog.aboutme.be', slug);
-
   const disqusConfig = {
-    shortname: process.env.DISQUS_NAME,
-    config: { identifier: disqusUrl, title },
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: slug, title },
   };
   return (
     <Layout>
@@ -56,9 +54,9 @@ const BlogPostTemplate = (props: any) => {
           title={post.frontmatter.title}
           date={post.frontmatter.date}
           preview={
-            post.frontmatter.hasCover
-              ? post.frontmatter.cover.childImageSharp.fluid
-              : null
+            post.frontmatter.cover == null
+              ? null
+              : post.frontmatter.cover.childImageSharp.gatsbyImageData
           }
           description={post.html}
           imagePosition="left"
@@ -84,12 +82,12 @@ const BlogPostTemplate = (props: any) => {
             <TwitterShareButton url={shareUrl} title={title}>
               <IoLogoTwitter />
             </TwitterShareButton>
-            { post.frontmatter.hasCover ? <PinterestShareButton
+            <PinterestShareButton
               url={shareUrl}
               media={urljoin(siteUrl, post.frontmatter.cover.publicURL)}
             >
               <IoLogoPinterest />
-            </PinterestShareButton> : null}
+            </PinterestShareButton>
             <RedditShareButton
               url={shareUrl}
               title={`${post.frontmatter.title}`}
@@ -99,7 +97,7 @@ const BlogPostTemplate = (props: any) => {
           </PostShare>
         </BlogPostFooter>
         <BlogPostComment
-          className={post.frontmatter.hasCover ? '' : 'center'}
+          className={post.frontmatter.cover == null ? 'center' : ''}
         >
           <DiscussionEmbed {...disqusConfig} />
         </BlogPostComment>
@@ -117,7 +115,7 @@ const BlogPostTemplate = (props: any) => {
                   image={
                     node.frontmatter.cover == null
                       ? null
-                      : node.frontmatter.cover.childImageSharp.fluid
+                      : node.frontmatter.cover.childImageSharp.gatsbyImageData
                   }
                   tags={node.frontmatter.tags}
                 />
@@ -151,13 +149,14 @@ export const pageQuery = graphql`
         date(formatString: "DD MMM, YYYY")
         description
         tags
-        hasCover
         cover {
           publicURL
           childImageSharp {
-            fluid(maxWidth: 1170, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
       }
@@ -181,9 +180,11 @@ export const pageQuery = graphql`
             cover {
               publicURL
               childImageSharp {
-                fluid(maxWidth: 480, maxHeight: 285, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import _ from 'lodash';
-import Img from 'gatsby-image';
+import GatsbyImage from '../../components/gatsby-image';
 import {
   PostCardWrapper,
   PostPreview,
@@ -23,7 +23,6 @@ interface PostCardMinimalProps {
   date?: string;
   tags?: [];
   className?: string;
-  imageType?: 'fixed' | 'fluid';
 }
 
 const PostCardMinimal: React.FunctionComponent<PostCardMinimalProps> = ({
@@ -34,7 +33,6 @@ const PostCardMinimal: React.FunctionComponent<PostCardMinimalProps> = ({
   date,
   tags,
   className,
-  imageType,
   ...props
 }) => {
   // Add all classs to an array
@@ -60,11 +58,13 @@ const PostCardMinimal: React.FunctionComponent<PostCardMinimalProps> = ({
           {image == null ? null : (
             <PostPreview className="post_preview">
               <Link to={url}>
-                {imageType === 'fluid' ? (
-                  <Img fluid={image} alt="post preview" />
-                ) : (
-                  <Img fixed={image} alt="post preview" />
-                )}
+                {/* <img src={image} alt="" /> */}
+                <GatsbyImage
+                  src={image}
+                  alt="post preview"
+                  width={170}
+                  height={170}
+                />
               </Link>
             </PostPreview>
           )}
@@ -98,10 +98,6 @@ const PostCardMinimal: React.FunctionComponent<PostCardMinimalProps> = ({
       </PostDetails>
     </PostCardWrapper>
   );
-};
-
-PostCardMinimal.defaultProps = {
-  imageType: 'fluid',
 };
 
 export default PostCardMinimal;

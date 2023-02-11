@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Image from 'gatsby-image';
+import GatsbyImage from '../../components/gatsby-image';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import {
@@ -17,9 +17,11 @@ const NotFound: React.FunctionComponent<NotFoundProps> = () => {
     query {
       avatar: file(absolutePath: { regex: "/404.png/" }) {
         childImageSharp {
-          fluid(maxWidth: 750, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
       site {
@@ -49,7 +51,7 @@ const NotFound: React.FunctionComponent<NotFoundProps> = () => {
         </Goback>
       </NotFoundContent>
       <NotFoundImage>
-        <Image fluid={Data.avatar.childImageSharp.fluid} alt="author" />
+        <GatsbyImage src={Data.avatar.childImageSharp.gatsbyImageData} alt="not found" />
       </NotFoundImage>
     </NotFoundWrapper>
   );

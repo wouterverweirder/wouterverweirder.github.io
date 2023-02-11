@@ -61,9 +61,6 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
           },
-          {
-            resolve: `gatsby-remark-prismjs`,
-          },
 
           {
             resolve: `gatsby-remark-copy-linked-files`,
@@ -75,25 +72,25 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-image`,
+    },
+    {
       resolve: `gatsby-transformer-sharp`,
     },
     {
       resolve: `gatsby-plugin-sharp`,
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `AboutMe - Personal Blog Wouter Verweirder`,
-        short_name: `AboutMe.be`,
+        name: `StoryHub - Personal Blog Minimal`,
+        short_name: `StoryHub`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -102,16 +99,24 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-remove-serviceworker`,
+      resolve: `gatsby-plugin-offline`,
     },
     {
       resolve: `gatsby-plugin-react-helmet`,
     },
     {
-      resolve: `gatsby-plugin-typescript`,
+      resolve: `gatsby-plugin-lodash`,
     },
     {
-      resolve: `gatsby-plugin-lodash`,
-    }
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [
+            'Poppins:300,400,500,600,700',
+            'Fira Sans:100,300,400,500,600,700',
+          ],
+        },
+      },
+    },
   ],
 };

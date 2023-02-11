@@ -29,9 +29,9 @@ const BlogList = (props: any) => {
               key={node.fields.slug}
               title={node.frontmatter.title || node.fields.slug}
               image={
-                node.frontmatter.hasCover
-                  ? node.frontmatter.cover.childImageSharp.fluid
-                  : null
+                node.frontmatter.cover == null
+                  ? null
+                  : node.frontmatter.cover.childImageSharp.gatsbyImageData
               }
               url={node.fields.slug}
               description={node.frontmatter.description || node.excerpt}
@@ -76,16 +76,17 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD [<span>] MMMM YYYY [</span>]")
+            date(formatString: "DD [<span>] MMMM [</span>]")
             title
             description
             tags
-            hasCover
             cover {
               childImageSharp {
-                fluid(maxWidth: 170, maxHeight: 170, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
+                gatsbyImageData(
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }
