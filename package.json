@@ -31,6 +31,7 @@
     "gatsby-source-filesystem": "^4.2.0",
     "gatsby-transformer-remark": "^5.2.0",
     "gatsby-transformer-sharp": "^4.2.0",
+    "gh-pages": "^5.0.0",
     "js-search": "^2.0.0",
     "katex": "^0.15.1",
     "lodash": "^4.17.21",
