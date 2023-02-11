@@ -89,17 +89,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `StoryHub - Personal Blog Minimal`,
-        short_name: `StoryHub`,
+        name: `AboutMe - Personal Blog Wouter Verweirder`,
+        short_name: `AboutMe.be`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-offline`,
     },
     {
       resolve: `gatsby-plugin-react-helmet`,
@@ -118,5 +115,8 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-remove-serviceworker`,
+    }
   ],
 };
