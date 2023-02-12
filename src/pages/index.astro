@@ -1,0 +1,60 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).filter((_, index) => index < 10);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			ul {
+				list-style-type: none;
+				padding: unset;
+			}
+			ul li {
+				display: flex;
+			}
+			ul li :global(time) {
+				flex: 0 0 130px;
+				font-style: italic;
+				color: #595959;
+			}
+			ul li a:visited {
+				color: #8e32dc;
+			}
+		</style>
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>👋 Hi there, I'm Wouter Verweirder</h1>
+			<p>
+				Teaching code <a href="https://devine.be/en">@devine</a>, building projects <a href="https://happy-banana.be">@happy banana</a>
+			</p>
+			<section>
+				<h2>Latest Blog Posts</h2>
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<FormattedDate date={post.data.pubDate} />
+								<a href={`/${post.slug}/`}>{post.data.title}</a>
+							</li>
+						))
+					}
+				</ul>
+				<a href="/blog/2">Next</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
