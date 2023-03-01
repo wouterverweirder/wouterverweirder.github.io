@@ -16,7 +16,7 @@ let heroImagePath = heroImage?.indexOf('.') === 0 ? `${permalink}${heroImage.sli
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={heroImagePath} />
 		<style>
 			.title {
 				font-size: 2em;
