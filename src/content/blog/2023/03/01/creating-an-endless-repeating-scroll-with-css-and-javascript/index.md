@@ -1,7 +1,7 @@
 ---
 title: Creating an endless repeating scroll with css & javascript
 author: 'wouter'
-pubDate: "2023-03-01T16:00:00.000Z"
+pubDate: "2023-03-01T09:00:00.000Z"
 heroImage: ./preview.jpg
 hasCover: true
 description: ""
@@ -142,3 +142,5 @@ init();
 This resulted in a smooth experience on all devices, and browsers.
 
 <video src="finished.mp4" controls loop muted playsline autoplay style="width: 100%; height: auto;"></video>
+
+*Update 2023-04-21: I noticed some performance issues on desktop Safari, read more about this in the follow-up post: [CSS variables can be slow in Safari](/2023/04/21/css-variables-can-be-slow-in-safari/)*
