@@ -30,3 +30,5 @@ repeatMain.forEach( el => el.style.transform = `translate3d(0, ${targetMarginTop
 This fixed the problem, and the scroll is now a lot smoother:
 
 <video src="scroll-regular-style-properties-safari-hq.mp4" controls loop muted playsline autoplay style="width: 100%; height: auto;"></video>
+
+I'm not sure why this is happening, it looks like the way Safari handles css variable updates is less performant than other browsers...
