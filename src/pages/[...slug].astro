@@ -22,7 +22,7 @@ const { Content } = await post.render();
 	<script is:inline>
 		var post = JSON.parse(document.getElementById('disqus_thread').dataset.post);
 		var disqus_config = function () {
-		this.page.url = post.data.permalink;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.url = `https://blog.aboutme.be${post.data.permalink}`;  // Replace PAGE_URL with your page's canonical URL variable
 		this.page.identifier = post.data.permalink; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 		};
 		(function() { // DON'T EDIT BELOW THIS LINE
