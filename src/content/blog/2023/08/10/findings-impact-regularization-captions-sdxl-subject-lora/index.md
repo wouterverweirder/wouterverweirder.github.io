@@ -671,43 +671,102 @@ This was the hardest one for the models: most of them didn't look like me at ful
 - **With input captions**, **all versions** are able to do 3D characters, with the **exception** of **real-photo regularization** images **without captions**.
 - **Without input captions**, I need **high-quality generated regularization** images **with captions**.
 
+## Update: Styling test (August 15, 2023)
+
+I wasn't entirely satisfied with the styling test (line drawing and 3D render). Especially the **3D render was botched** by the fact that I used **keywords** from my captions ("looking into the camera") in the **beginning of my prompt**, which caused the Lora to **overdose** on the photo style.
+
+I took a look at [the Fooocus project](https://github.com/lllyasviel/Fooocus) and defined a couple of prompts based upon their style prompts:
+
+1. "line art drawing of a w0ut3r man, headshot, professional, sleek, modern, minimalist, graphic, line art, vector graphics", **negative**: "anime, photorealistic, realism, realistic"
+2. "hyper-detailed 3D render of cartoon w0ut3r man in a confident expressive pose, cartoon eyes, caricature, exaggerated facial features, cute cartoon style, white background", **negative**: ""
+3. "graffiti style portrait of a w0ut3r man . street art, vibrant, urban, detailed, tag, mural", **negative**: "ugly, deformed, noisy, blurry, low contrast, realism, photorealistic"
+4. "impressionist painting of a w0ut3r man . loose brushwork, vibrant color, light and shadow play, captures feeling over form", **negative**: "anime, photorealistic, 35mm film, deformed, glitch, low contrast, noisy"
+5. "Pop Art style portrait of a w0ut3r man . bright colors, bold outlines, popular culture themes, ironic or kitsch", **negative**: "ugly, deformed, noisy, blurry, low contrast, realism, photorealistic, minimalist"
+6. "Renaissance style portrait painting of a w0ut3r man . realistic, perspective, light and shadow, religious or mythological themes, highly detailed", **negative**: "ugly, deformed, noisy, blurry, low contrast, modernist, minimalist, abstract"
+7. "watercolor painting portrait of w0ut3r man . vibrant, beautiful, painterly, detailed, textural, artistic", **negative**: "anime, photorealistic, 35mm film, deformed, glitch, low contrast, noisy"
+8. "GTA-style artwork portrait of a w0ut3r man . satirical, exaggerated, pop art style, vibrant colors, iconic characters, action-packed", **negative**: "realistic, black and white, low contrast, impressionist, cubist, noisy, blurry, deformed"
+9. "retro arcade style portrait of a w0ut3r man . 8-bit, pixelated, vibrant, classic video game, old school gaming, reminiscent of 80s and 90s arcade games", **negative**: "modern, ultra-high resolution, photorealistic, 3D"
+10. "stained glass style portrait of a w0ut3r man . vibrant, beautiful, translucent, intricate, detailed", **negative**: "ugly, deformed, noisy, blurry, low contrast, realism, photorealistic"
+
+The results of these prompts **without any Lora** applied look like this:
+
+<a href="style-prompts-2.jpg" target="_blank" style="display: block; margin-bottom: 1em">
+  <img src="style-prompts-2.jpg" alt="" />
+</a>
+
+I did extra renders of Lora versions v001, v002d, v004, v005 and v012. These were the Lora's that were able to generate high quality photos.
+
+<figure>
+  <img src="table-complex-photo.png" alt="analysis of the grid" />
+  <figcaption>results of the photo rendering</figcaption>
+</figure>
+
+It made no sense to spend extra time on the other Lora's, as they were not able to generate good photos based upon photo input.
+
+### Styles v001
+
+<figure style="display: block; margin-bottom: 1em">
+  <a href="v001_style_prompts_2.jpg" target="_blank">  
+    <img src="v001_style_prompts_2.jpg" alt="table with renders of v001" />
+  </a>
+  <figcaption>style prompts v001 - epoch 003 is earliest version where it picks up my look accross styles. From epoch 008 on, the renaissance painting becomes a photo.</figcaption>
+</figure>
+
+### Styles v002d
+
+<figure style="display: block; margin-bottom: 1em">
+  <a href="v002d_style_prompts_2.jpg" target="_blank">  
+    <img src="v002d_style_prompts_2.jpg" alt="table with renders of v002d" />
+  </a>
+  <figcaption>style prompts v002d - epoch 007 is where it starts to pick up my look accross styles, although it is still struggling with the pop-art version, which it only starts nailingin epoch 010. Maybe this network needs even longer training?</figcaption>
+</figure>
+
+### Styles v004
+
+<figure style="display: block; margin-bottom: 1em">
+  <a href="v004_style_prompts_2.jpg" target="_blank">  
+    <img src="v004_style_prompts_2.jpg" alt="table with renders of v004" />
+  </a>
+  <figcaption>style prompts v004 - epoch 004 is ok, apart from the pop-art. The stained glass look starts getting lost in further epochs</figcaption>
+</figure>
+
+### Styles 005
+
+<figure style="display: block; margin-bottom: 1em">
+  <a href="v005_style_prompts_2.jpg" target="_blank">  
+    <img src="v005_style_prompts_2.jpg" alt="table with renders of v005" />
+  </a>
+  <figcaption>style prompts v005 - the 8-bit and stained glass renders become a photo quite early, the line drawing as well in epochs 009 and 010 - looks like this one is worse off than 004 (which has captions for the regularization images). The least-bad version here is epoch 004 for me.</figcaption>
+</figure>
+
+### Style v012
+
+<figure style="display: block; margin-bottom: 1em">
+  <a href="v012_style_prompts_2.jpg" target="_blank">  
+    <img src="v012_style_prompts_2.jpg" alt="table with renders of v012" />
+  </a>
+  <figcaption>style prompts v012 - this one is even worse - photos (almost) accross the board starting from epoch 4. No real pick here...</figcaption>
+</figure>
+
 ## Conclusions
 
-<img src="table-conclusions.png" alt="analysis of all prompts" />
+<a href="grid-conclusion-2.jpg" target="_blank" style="display: block; margin-bottom: 1em">
+<img src="grid-conclusion-2.jpg" alt="grid overall best" />
+</a>
+
+<img src="table-conclusions-2.png" alt="analysis of all prompts" />
 
 ### General
 
-- The highest chance of success, is with **detailed input captions**.
+- The highest chance of success, is with **input captions**.
+- If I don't care about leaking into the main class, **don't bother with regularization images**. The Lora is most flexible at that point
 - The only way my special keyword `w0ut3r` didn't leak, is when I **generated high-quality regularization images** using the **same captions (without the keyword) as the input images**.
-
-**v002** is the only version that didn't leak too much. It was trained enough at epoch 7 (+/- 1400 steps). However: it fails at more creative tasks such as the 3D character, as you can see in the grid below. I tried using it for a picture with unicorns, rainbows and me, and it also failed that task with a bad image quality and artifacts.
-
-<a href="grid-best-epoch-a.jpg" target="_blank" style="display: block; margin-bottom: 1em">
-<img src="grid-best-epoch-a.jpg" alt="grid overall best" style="margin-bottom: 1em" />
-</a>
-
-### If I don't care about leaking into the main class
-
-When I don't care about leaking into the main class, and I just want to generate images of myself.
-
-- **v001**: I could get **good results**, and fast, **without any regularization images**. In my case, my model was trained enough at epoch 5 (+/- 1000 steps). I do need to **caption the input images**.
-- **v004** & **v005**: I was able to train **a little faster** with **real photo regularization images** on top of **input with captions**. This model was trained enough at epoch 4 (+/- 800 steps).
-
-#### If I don't want to bother with input captions
-
-- **v012**: The only acceptable combination I found here was **using real photos as regularization images** with your **uncaptioned input images**. That particular model did fail at the 3D character prompt, so it looks like it's a bit harder to work with.
-
-<a href="grid-best-epoch-b.jpg" target="_blank" style="display: block; margin-bottom: 1em">
-<img src="grid-best-epoch-b.jpg" alt="grid with leaks" />
-</a>
-
-v012 needs a lower Lora strength for the line drawing. For the 3D character, all of the Lora's need a lower strength.
 
 ## That's all folks
 
 I hope this post gave you some insights in what approaches you can take to training your own subject Lora using Dreambooth. That being said, I'm not an expert in this field, and I'm sure there are other ways to get good results. If you have any questions, feel free to leave a comment below.
 
 <figure style="display: block; padding-bottom: 1em">
-  <img src="unicorn.jpg" alt="wouter riding a unicorn" />
-  <figcaption>prompt: w0ut3r man riding a rainbow unicorn, cinematic, dramatic - lora v005, epoch 6</figcaption>
+  <img src="unicorn-2.jpg" alt="wouter riding a unicorn" />
+  <figcaption>prompt: w0ut3r man riding a rainbow unicorn, cinematic, dramatic - lora v001, epoch 6</figcaption>
 </figure>
