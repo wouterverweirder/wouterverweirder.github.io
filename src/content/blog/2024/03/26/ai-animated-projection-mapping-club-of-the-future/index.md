@@ -13,7 +13,7 @@ tags:
   - projection-mapping
   - stable-diffusion
 ---
-A part of the FTI event in Kortrijk, was FTI's club of the future. After doing the [static AI generated projections on the Belfort](/2023/10/18/projection-mapping-with-generative-ai/) a couple of months ago, my colleague [Frédéric Baert](https://www.linkedin.com/in/fredericbaert/) and I were asked if we wanted to do a projection mapping on the building of the club of the future. Naturally, we said yes, but we also wanted to take the opportunity to explore animated AI content.
+A part of the FTI event in Kortrijk, was FTI's club of the future. After doing the [static AI generated projections on the Belfort](/2023/10/18/projection-mapping-with-generative-ai/) a couple of months ago, my [Howest](https://howest.be) [Devine](https://devine.be) colleague [Frédéric Baert](https://www.linkedin.com/in/fredericbaert/) and I were asked if we wanted to do a projection mapping on the building of the club of the future. Naturally, we said yes, but we also wanted to take the opportunity to explore animated AI content.
 
 We were already familiar with [Deforum](https://deforum.github.io), a tool that allows you to create animations using AI. A big problem with Deforum is that the generated animations have a lot of flicker, it's an aesthetic on it's own, but not what we were looking for.
 
