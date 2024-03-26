@@ -127,3 +127,7 @@ It was great collaborating with [Frédéric]((https://www.linkedin.com/in/freder
 You can check the final renders in the Youtube video below (make sure to select the highest quality, as the video is in almost-4K resolution):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TSBXe8-qogI?si=c_f1LHseSExQGVRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 100%"></iframe>
+
+I've also recorded some footage of the projection mapping, to give an impression of how it looked in real life:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ofWpsVXT-UU?si=y4zR6Eeb0vqoreDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 100%"></iframe>
